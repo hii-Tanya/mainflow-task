@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}body {
+font-family: 'Segoe UI', sans-serif;
+line-height: 1.6;
+background-color: #000;
+color: #fff;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+background-color: #111;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+color: #1db954;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.nav-links li {
+position: relative;
+}
+
+.nav-links a {
+text-decoration: none;
+color: white;
+padding: 8px;
+}
+
+.nav-links a:hover {
+color: #1db954;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+top: 35px;
+left: 0;
+background-color: #222;
+min-width: 150px;
+z-index: 1;
+}
+
+.dropdown-content li a {
+display: block;
+padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.hero {
+background: url('images/back.jpeg') no-repeat center center/cover;
+height: 90vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+position: relative;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 40px;
+border-radius: 10px;
+}
+
+.hero h1 {
+font-size: 48px;
+margin-bottom: 20px;
+}
+
+.cta-btn {
+display: inline-block;
+padding: 12px 25px;
+background-color: #1db954;
+color: white;
+text-decoration: none;
+font-weight: bold;
+border-radius: 25px;
+margin-top: 20px;
+}
+
+.features {
+display: flex;
+justify-content: space-around;
+padding: 60px 20px;
+background-color: #111;
+flex-wrap: wrap;
+}
+
+.feature {
+max-width: 300px;
+text-align: center;
+margin: 20px;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background-color: #000;
+font-size: 14px;
+}
+
+@media (max-width: 768px) {
+.features {
+flex-direction: column;
+align-items: center;
+}
+
+.nav-links {
+flex-direction: column;
+gap: 10px;
+}
+
+.hero h1 {
+font-size: 32px;
+}
+
+.hero-content {
+width: 90%;
+}
+}
